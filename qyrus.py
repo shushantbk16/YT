@@ -212,3 +212,14 @@ print("- IOError: File I/O problems")
 print("- AttributeError: Attribute doesn't exist")
 print("- NameError: Variable doesn't exist")
 print("=" * 60)
+
+
+
+from fastapi import FastAPI
+app=FastAPI()
+
+
+@app.get("/")
+def read_root():
+    return {"message":"Hello World"}
+    
